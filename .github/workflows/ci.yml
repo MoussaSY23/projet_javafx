@@ -20,7 +20,7 @@ jobs:
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
-        java-version: '23' # Utiliser Java 23 car ton projet utilise cette version
+        java-version: '23'  # Utiliser Java 23 car ton projet utilise cette version
 
     - name: Vérifier la version de Java
       run: java -version
@@ -38,5 +38,4 @@ jobs:
       run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "moussasy23" --password-stdin
 
     - name: Pousser l'image sur DockerHub
-    run: docker push moussasy23/projet_exam:latest
-
+      run: docker push moussasy23/projet_exam:latest  # Indentation corrigée ici
