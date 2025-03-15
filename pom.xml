@@ -112,6 +112,10 @@
           <artifactId>jakarta.mail</artifactId>
           <version>2.0.1</version>
       </dependency>
+     
+     <build>
+    <finalName>projet_exam</finalName>
+</build>
 
 
 
