@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="799.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet_exam.emargementController">
+   <children>
+      <VBox fx:id="gestionpre" layoutX="23.0" layoutY="73.0" prefHeight="283.0" prefWidth="200.0" spacing="10" style="-fx-background-color: WHITE; -fx-border-radius: 10px; -fx-border-color: #ccc; -fx-background-radius: 10px; -fx-padding: 15;">
+         <children>
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #333;" text="Ajouter / Modifier" />
+            <Label fx:id="LDate" text="Date" />
+            <TextField fx:id="txtDate" prefHeight="30.0" prefWidth="170.0" />
+            <Label fx:id="LStatut" text="statut" />
+            <ComboBox fx:id="txtstatut" prefHeight="25.0" prefWidth="172.0" />
+            <Label fx:id="lProf" text="Professeur" />
+            <ComboBox fx:id="txtProfesseur" prefHeight="25.0" prefWidth="172.0" />
+            <Label text="Cours" />
+            <ComboBox fx:id="txtCours" prefHeight="25.0" prefWidth="172.0" />
+         </children>
+      </VBox>
+      <Label layoutX="23.0" layoutY="14.0" text="Gestion Presence">
+         <font>
+            <Font name="Arial Bold" size="28.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.0" startY="0.0">
+               <stops>
+                  <Stop color="#0598ff" offset="0.0" />
+                  <Stop color="#0353a4" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="bDelete" layoutX="596.0" layoutY="396.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #f44336; -fx-background-radius: 20px;" text="Supprimer" textFill="WHITE" />
+      <Button fx:id="Clear" layoutX="171.0" layoutY="401.0" mnemonicParsing="false" onAction="#onClear" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #f44336; -fx-text-fill: WHITE;" text="Clear" />
+      <Button fx:id="bUpdate" layoutX="447.0" layoutY="396.0" mnemonicParsing="false" onAction="#onUpdate" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #0598ff; -fx-background-radius: 20px;" text="Modifier" textFill="WHITE" />
+      <Button fx:id="bAdd" layoutX="23.0" layoutY="396.0" mnemonicParsing="false" onAction="#onAdd" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #0598ff; -fx-background-radius: 20px;" text="Ajouter" textFill="WHITE" />
+      <TableView fx:id="PresenceTable" layoutX="237.0" layoutY="73.0" onMouseClicked="#Load" prefHeight="300.0" prefWidth="500.0">
+         <columns>
+            <TableColumn fx:id="IdColumn" prefWidth="53.33332824707031" text="ID" />
+            <TableColumn fx:id="DateColumn" prefWidth="90.66665649414062" text="Date" />
+            <TableColumn fx:id="statutColumn" prefWidth="115.99993896484375" text="statut" />
+            <TableColumn fx:id="professeurColumn" prefWidth="115.33340454101562" text="professeur" />
+            <TableColumn fx:id="coursColumn" prefWidth="122.6666259765625" text="cours" />
+         </columns>
+      </TableView>
+      <Button fx:id="bExport" layoutX="656.0" layoutY="14.0" mnemonicParsing="false" onAction="#onExports" prefHeight="10.0" prefWidth="56.0" style="-fx-background-color: green; -fx-background-radius: 20px;" text="Excel" textFill="WHITE" />
+      <Button fx:id="bPDF" layoutX="722.0" layoutY="14.0" mnemonicParsing="false" onAction="#onPDF" prefHeight="10.0" prefWidth="56.0" style="-fx-background-color: white; -fx-background-radius: 20px;" text="PDF" textFill="#ef1919" />
+      <Label layoutX="544.0" layoutY="11.0" text="exporter">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="bAdd1" layoutX="297.0" layoutY="396.0" mnemonicParsing="false" onAction="#onAdd2" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #0598ff; -fx-background-radius: 20px;" text="Ajouter" textFill="WHITE" />
+   </children>
+</AnchorPane>

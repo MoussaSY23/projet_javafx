@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="469.0" prefWidth="701.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet_exam.SalleController">
+
+    <children>
+        <Label layoutX="30.0" layoutY="30.0" style="-fx-font-size: 14px; -fx-text-fill: #ffffff;" text="Libellé:" textFill="#140909" />
+
+        <TextField fx:id="txtlibelle" layoutX="100.0" layoutY="25.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-border-color: #1e3c72; -fx-border-radius: 5; -fx-background-radius: 5;" />
+
+        <Button fx:id="bClear" layoutX="320.0" layoutY="25.0" onAction="#onClear" style="-fx-background-color: #d32f2f; -fx-text-fill: #ffffff; -fx-background-radius: 5;" text="Effacer" />
+
+        <TableView fx:id="SalleTable" layoutX="30.0" layoutY="80.0" onMouseClicked="#onClicked" prefHeight="278.0" prefWidth="686.0" style="-fx-background-color: #e3f2fd; -fx-border-color: #1e3c72; -fx-border-radius: 5;">
+            <columns>
+                <TableColumn fx:id="IdColumn" prefWidth="100.0" text="ID" />
+                <TableColumn fx:id="libelleColumn" prefWidth="150.0" text="Libellé" />
+                <TableColumn fx:id="coursColumn" prefWidth="431.3333435058594" text="Cours" />
+            </columns>
+        </TableView>
+
+        <HBox layoutX="200.0" layoutY="330.0" spacing="10.0" />
+         <Button fx:id="btnAdd" layoutX="204.0" layoutY="389.0" onAction="#onAdd" style="-fx-background-color: #1976d2; -fx-text-fill: #ffffff; -fx-background-radius: 5; -fx-padding: 8 16;" text="Ajouter" />
+         <Button fx:id="btnUpdate" layoutX="303.0" layoutY="391.0" onAction="#onUpdate" style="-fx-background-color: #388e3c; -fx-text-fill: #ffffff; -fx-background-radius: 5; -fx-padding: 8 16;" text="Modifier" />
+         <Button fx:id="btnDelete" layoutX="418.0" layoutY="391.0" onAction="#onDelete" style="-fx-background-color: #d32f2f; -fx-text-fill: #ffffff; -fx-background-radius: 5; -fx-padding: 8 16;" text="Supprimer" />
+      <Label layoutX="30.0" layoutY="22.0" text="Libelle">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+
+    </children>
+</AnchorPane>

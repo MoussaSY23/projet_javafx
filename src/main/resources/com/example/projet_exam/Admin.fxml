@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="1013.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet_exam.AdminController">
+
+   <children>
+      <!-- Menu latéral -->
+      <AnchorPane fx:id="GestionAdmin" prefHeight="579.0" prefWidth="200.0" style="-fx-background-color: #2C3E50;">
+         <children>
+            <Button fx:id="btnUtilisateurs" layoutX="20.0" layoutY="62.0" mnemonicParsing="false" onAction="#utilisateurs" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="👤 Utilisateurs" />
+            <Button fx:id="btnCours" layoutX="20.0" layoutY="117.0" mnemonicParsing="false" onAction="#onCours" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="📚 Cours" />
+            <Button fx:id="btnProfesseurs" layoutX="20.0" layoutY="221.0" mnemonicParsing="false" onAction="#onProf" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="👨‍🏫 Professeurs" />
+            <Button fx:id="btnPresences" layoutX="20.0" layoutY="290.0" mnemonicParsing="false" onAction="#onPresence" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="Emargements" />
+            <Button fx:id="btnRapports" layoutX="20.0" layoutY="347.0" mnemonicParsing="false" onAction="#onRapport" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="📊 Rapports" />
+            <Button fx:id="btnSalle" layoutX="20.0" layoutY="173.0" mnemonicParsing="false" onAction="#onSalle" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="📚 Salle" />
+            <Button fx:id="btnLogout" layoutX="20.0" layoutY="456.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="📊 Logout" />
+            <Button fx:id="btnNotifications" layoutX="20.0" layoutY="400.0" mnemonicParsing="false" onAction="#onNotification" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="Notification" />
+         </children>
+      </AnchorPane>
+
+      <!-- Contenu dynamique -->
+      <AnchorPane fx:id="Sidetwo" layoutX="200.0" prefHeight="579.0" prefWidth="817.0" style="-fx-background-color: #ECF0F1;">
+         <!-- Conteneur pour les graphiques -->
+         <VBox fx:id="chartsContainer" layoutX="20.0" layoutY="20.0" prefHeight="540.0" prefWidth="780.0" spacing="20.0" style="-fx-padding: 20;">
+            <!-- Les graphiques seront ajoutés ici par le contrôleur -->
+         </VBox>
+      </AnchorPane>
+
+   </children>
+</AnchorPane>

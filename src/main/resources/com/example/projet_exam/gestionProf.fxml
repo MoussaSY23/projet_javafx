@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="742.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet_exam.ProfController">
+   <children>
+      <Label layoutX="10.0" layoutY="10.0" text="Gestion professeur">
+         <font>
+            <Font name="Arial Bold" size="28.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.0" startY="0.0">
+               <stops>
+                  <Stop color="#0598ff" offset="0.0" />
+                  <Stop color="#0353a4" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TableView fx:id="UserTable" layoutX="226.0" layoutY="104.0" onMouseClicked="#Load" prefHeight="330.0" prefWidth="510.0">
+         <columns>
+            <TableColumn fx:id="IdColumn" prefWidth="53.33332824707031" text="ID" />
+            <TableColumn fx:id="prenomColumn" prefWidth="90.66665649414062" text="Prenom" />
+            <TableColumn fx:id="nomColumn" prefWidth="106.66668701171875" text="nom" />
+            <TableColumn fx:id="emailColumn" prefWidth="99.99996948242188" text="email" />
+            <TableColumn fx:id="CoursColumn" prefWidth="152.00006103515625" text="cours" />
+         </columns>
+      </TableView>
+      <VBox layoutX="14.0" layoutY="104.0" prefHeight="330.0" prefWidth="200.0" spacing="10" style="-fx-background-color: WHITE; -fx-border-radius: 10px; -fx-border-color: #ccc; -fx-background-radius: 10px; -fx-padding: 15;">
+         <children>
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #333;" text="Ajouter / Modifier" />
+            <Label text="Prenom" />
+            <TextField fx:id="txtPrenom" prefHeight="30.0" prefWidth="170.0" />
+            <Label text="Nom" />
+            <TextField fx:id="txtNom" prefHeight="30.0" prefWidth="170.0" />
+            <Label text="Email" />
+            <TextField fx:id="txtEmail" prefHeight="30.0" prefWidth="170.0" />
+         </children>
+      </VBox>
+      <Button fx:id="bDelete" layoutX="551.0" layoutY="458.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #f44336; -fx-background-radius: 20px;" text="Supprimer" textFill="WHITE" />
+      <Button fx:id="Clear" layoutX="26.0" layoutY="463.0" mnemonicParsing="false" onAction="#onClear" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #f44336; -fx-text-fill: WHITE;" text="Clear" />
+      <Button fx:id="bUpdate" layoutX="379.0" layoutY="458.0" mnemonicParsing="false" onAction="#onUpdate" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #0598ff; -fx-background-radius: 20px;" text="Modifier" textFill="WHITE" />
+      <Button fx:id="bAdd" layoutX="226.0" layoutY="458.0" mnemonicParsing="false" onAction="#onAdd" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #0598ff; -fx-background-radius: 20px;" text="Ajouter" textFill="WHITE" />
+      <TextField fx:id="txtSearch" layoutX="355.0" layoutY="57.0" prefHeight="35.0" prefWidth="322.0" promptText="Rechercher un livre..." style="-fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: #0598ff;" />
+      <Button fx:id="bSearch" layoutX="186.0" layoutY="57.0" mnemonicParsing="false" onAction="#Search" prefHeight="35.0" prefWidth="162.0" style="-fx-background-color: #0598ff; -fx-background-radius: 20px;" text="Rechercher" textFill="WHITE" />
+      <TextField fx:id="txtId2" layoutX="-1.0" layoutY="50.0" visible="false" />
+   </children>
+</AnchorPane>
