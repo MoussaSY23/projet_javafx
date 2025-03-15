@@ -16,20 +16,23 @@ jobs:
     - name: Cloner le dépôt
       uses: actions/checkout@v4
 
-    - name: Installer Java et Maven
+    - name: Installer Java 23 et Maven
       uses: actions/setup-java@v4
       with:
-        distribution: 'temurin'
-        java-version: '17'
+        distribution: 'oracle'  # Utilisation d'Oracle JDK pour Java 23
+        java-version: '23'      # Version Java 23 spécifiée
+
+    - name: Vérifier la version de Java
+      run: java -version
 
     - name: Build Maven
       run: mvn clean install
 
     - name: Construction de l'image Docker
-      run: docker build -t MoussaSy/projet_exam:latest .
+      run: docker build -t moussa_sy/projet_exam:latest .
 
     - name: Connexion à DockerHub
       run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
     - name: Pousser l'image sur DockerHub
-      run: docker push MoussaSy/projet_exam:latest
+      run: docker push moussa_sy/projet_exam:latest
